@@ -9,6 +9,7 @@
   <script src="js/gameplay.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
 <body>
 
@@ -37,8 +38,8 @@
 </nav>
 
 <div class="jumbotron">
-  <div class="container text-center">
-    <h1>WORD</h1>
+  <div class="container text-center" >
+    <h1 id="currentConstruction"><span ng-bind="nextChar"/></h1>
     <p><a class="btn btn-primary btn-lg" href="#" role="button">Challenge!</a></p>
   </div>
 </div>
@@ -50,9 +51,11 @@
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
       <p>Current Project</p>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4" ng-app="">
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
       <p>Project 2</p>
+      <h1><input type="text" ng-model="nextChar"></h1>
+      <p><span ng-bind="nextChar"/></p>
     </div>
     <div class="col-sm-4">
       <div class="well">
@@ -66,9 +69,8 @@
 </div><br>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <p>Player X turn</p>
 </footer>
-
 </body>
 </html>
 
